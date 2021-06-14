@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
 const NavLists = styled.ul`
   display: flex;
@@ -14,22 +15,28 @@ const NavList = styled.li`
   border-bottom: 1px solid rgb(227, 229, 232);
 `;
 
-const NavMainView = styled.div`
-  border-bottom: 5px solid black;
-  padding-bottom: 10px;
-  font-weight: 700;
-`;
+// const NavFocus = styled.div`
+//   border-bottom: 5px solid black;
+//   padding-bottom: 10px;
+//   font-weight: 700;
+// `;
 
 function Nav() {
   return (
     <>
       <NavLists>
         <NavList>
-          <NavMainView>오늘</NavMainView>
+          <Link to="/">오늘</Link>
         </NavList>
-        <NavList>신규</NavList>
-        <NavList>인기</NavList>
-        <NavList>마이</NavList>
+        <NavList>
+          <Link to="/new">신규</Link>
+        </NavList>
+        <NavList>
+          <Link to="/hot">인기</Link>
+        </NavList>
+        <NavList>
+          <Link to="/products">마이</Link>
+        </NavList>
       </NavLists>
     </>
   );
