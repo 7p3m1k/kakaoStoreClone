@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { VscMenu, VscGlobe } from "react-icons/vsc";
-import { FiSearch } from "react-icons/fi";
+import { VscMenu, VscGlobe, FiSearch } from "react-icons/all";
+import { Link } from "react-router-dom";
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -17,10 +17,18 @@ const Logo = styled.div`
 `;
 
 function Header() {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
   return (
     <HeaderWrapper>
       <VscMenu size="24" />
-      <Logo></Logo>
+      <Link to="/" onClick={openModal}>
+        <Logo />
+      </Link>
       <div>
         <FiSearch size="24" />
         <VscGlobe size="24" />

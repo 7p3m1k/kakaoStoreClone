@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Link,
+  useLocation,
+} from "react-router-dom";
+
+import NavbarItem from "./NavbarItem";
 
 const NavLists = styled.ul`
   display: flex;
@@ -22,21 +30,40 @@ const NavList = styled.li`
 // `;
 
 function Nav() {
+  const pathName = useLocation().pathname;
+
+  const menus = [
+    {
+      name: "오늘",
+      path: "/",
+    },
+    {
+      name: "신규",
+      path: "/new",
+    },
+    {
+      name: "인기",
+      path: "/hot",
+    },
+    {
+      name: "마이",
+      path: "/products",
+    },
+  ];
+
   return (
     <>
       <NavLists>
-        <NavList>
-          <Link to="/">오늘</Link>
-        </NavList>
-        <NavList>
-          <Link to="/new">신규</Link>
-        </NavList>
-        <NavList>
-          <Link to="/hot">인기</Link>
-        </NavList>
-        <NavList>
-          <Link to="/products">마이</Link>
-        </NavList>
+        {menus.map((menu, index) => (
+          <NavList>
+            <Link to={menu.path} key={index}>
+              <NavbarItem
+                menu={menu}
+                isActive={pathName === menu.path ? true : false}
+              />
+            </Link>
+          </NavList>
+        ))}
       </NavLists>
     </>
   );
