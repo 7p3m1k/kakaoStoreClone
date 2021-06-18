@@ -5,7 +5,7 @@ import GlobalStyles from "./GlobalStyles";
 import styled from "styled-components";
 
 const MainWrapper = styled.div`
-  width: 960px;
+  width: 640px;
   margin: 0 auto;
 `;
 

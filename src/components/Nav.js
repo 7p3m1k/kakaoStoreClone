@@ -1,12 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-  Link,
-  useLocation,
-} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import NavbarItem from "./NavbarItem";
 
@@ -22,12 +16,6 @@ const NavList = styled.li`
   font-weight: 400;
   border-bottom: 1px solid rgb(227, 229, 232);
 `;
-
-// const NavFocus = styled.div`
-//   border-bottom: 5px solid black;
-//   padding-bottom: 10px;
-//   font-weight: 700;
-// `;
 
 function Nav() {
   const pathName = useLocation().pathname;

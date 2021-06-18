@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { VscMenu, VscGlobe, FiSearch } from "react-icons/all";
 import { Link } from "react-router-dom";
+import SideModal from "./SideModal";
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -23,16 +24,25 @@ function Header() {
     setShowModal(true);
   };
 
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <HeaderWrapper>
-      <VscMenu size="24" />
-      <Link to="/" onClick={openModal}>
+      <VscMenu size="24" onClick={openModal} />
+      <Link to="/">
         <Logo />
       </Link>
       <div>
         <FiSearch size="24" />
         <VscGlobe size="24" />
       </div>
+      <SideModal
+        showModal={showModal}
+        closeModal={closeModal}
+        openModal={openModal}
+      />
     </HeaderWrapper>
   );
 }
