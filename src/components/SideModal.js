@@ -63,7 +63,7 @@ const ModalMenuList = styled.li`
   line-height: 48px;
 
   ${props =>
-    props.paddingTop &&
+    props.marginTop &&
     css`
       margin-top: 16px;
     `}
@@ -81,6 +81,7 @@ const ModalMenuList = styled.li`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      cursor: pointer;
     `}
 `;
 
@@ -107,21 +108,25 @@ function SideModal({ showModal, closeModal, openModal }) {
             </UserInfo>
             <ModalBanner />
             <ul>
-              <ModalMenuList paddingTop>장바구니 내역</ModalMenuList>
+              <ModalMenuList marginTop>장바구니 내역</ModalMenuList>
               <ModalMenuList paddingBottom>주문·배송 내역</ModalMenuList>
-              <ModalMenuList paddingTop arrow>
+              <ModalMenuList
+                marginTop
+                arrow
+                onClick={() => console.log("클릭")}
+              >
                 캐릭터 <IoIosArrowDown />
               </ModalMenuList>
               <ModalMenuList paddingBottom arrow>
                 카테고리
                 <IoIosArrowDown />
               </ModalMenuList>
-              <ModalMenuList paddingTop>공지사항</ModalMenuList>
+              <ModalMenuList marginTop>공지사항</ModalMenuList>
               <ModalMenuList paddingBottom>고객센터</ModalMenuList>
-              <ModalMenuList paddingTop paddingBottom>
+              <ModalMenuList marginTop paddingBottom>
                 기프트카드 조회·환불
               </ModalMenuList>
-              <ModalMenuList paddingTop>브랜드 스토리</ModalMenuList>
+              <ModalMenuList marginTop>브랜드 스토리</ModalMenuList>
               <ModalMenuList paddingBottom>매장안내</ModalMenuList>
             </ul>
             <LoginBtn>
