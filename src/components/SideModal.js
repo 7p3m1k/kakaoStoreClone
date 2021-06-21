@@ -4,6 +4,7 @@ import CharacterList from "./CharacterList";
 import Kategorie from "./Kategorie";
 import {
   IoIosArrowDown,
+  IoIosArrowUp,
   IoIosArrowForward,
   AiOutlineLock,
 } from "react-icons/all";
@@ -132,11 +133,11 @@ function SideModal({ showModal, closeModal, openModal }) {
                 arrow
                 onClick={() => setCharacter(!openCharacter)}
               >
-                캐릭터 <IoIosArrowDown />
+                캐릭터 {openCharacter ? <IoIosArrowUp /> : <IoIosArrowDown />}
               </ModalMenuList>
               {openCharacter ? <CharacterList /> : null}
               <ModalMenuList arrow onClick={() => setKategorie(!openKategorie)}>
-                카테고리 <IoIosArrowDown />
+                카테고리 {openKategorie ? <IoIosArrowUp /> : <IoIosArrowDown />}
               </ModalMenuList>
               {openKategorie ? <Kategorie /> : null}
               <ModalMenuList marginTop borderTop>
