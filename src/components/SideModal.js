@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { keyframes, css } from "styled-components";
+import CharacterList from "./CharacterList";
 import {
   IoIosArrowDown,
   IoIosArrowForward,
@@ -93,6 +94,7 @@ const LoginBtn = styled.div`
 `;
 
 function SideModal({ showModal, closeModal, openModal }) {
+  const [openCharacter, setCharacter] = useState(false);
   return (
     <>
       {showModal ? (
@@ -113,10 +115,11 @@ function SideModal({ showModal, closeModal, openModal }) {
               <ModalMenuList
                 marginTop
                 arrow
-                onClick={() => console.log("클릭")}
+                onClick={() => setCharacter(!openCharacter)}
               >
                 캐릭터 <IoIosArrowDown />
               </ModalMenuList>
+              {openCharacter ? <CharacterList /> : null}
               <ModalMenuList paddingBottom arrow>
                 카테고리
                 <IoIosArrowDown />
