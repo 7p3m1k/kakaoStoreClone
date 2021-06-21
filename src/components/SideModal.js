@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled, { keyframes, css } from "styled-components";
 import CharacterList from "./CharacterList";
+import Kategorie from "./Kategorie";
 import {
   IoIosArrowDown,
   IoIosArrowForward,
@@ -31,6 +32,12 @@ const Modal = styled.div`
   background-color: white;
   animation: 0.4s ${SlideUp} ease;
   padding: 30px;
+  overflow: scroll;
+
+  ::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+  }
 `;
 
 const UserInfo = styled.div`
@@ -84,6 +91,13 @@ const ModalMenuList = styled.li`
       justify-content: space-between;
       cursor: pointer;
     `}
+    
+    ${props =>
+    props.borderTop &&
+    css`
+      border-top: 1px solid rgb(242, 242, 242);
+      padding-top: 16px;
+    `}
 `;
 
 const LoginBtn = styled.div`
@@ -95,6 +109,7 @@ const LoginBtn = styled.div`
 
 function SideModal({ showModal, closeModal, openModal }) {
   const [openCharacter, setCharacter] = useState(false);
+  const [openKategorie, setKategorie] = useState(false);
   return (
     <>
       {showModal ? (
@@ -120,11 +135,13 @@ function SideModal({ showModal, closeModal, openModal }) {
                 캐릭터 <IoIosArrowDown />
               </ModalMenuList>
               {openCharacter ? <CharacterList /> : null}
-              <ModalMenuList paddingBottom arrow>
-                카테고리
-                <IoIosArrowDown />
+              <ModalMenuList arrow onClick={() => setKategorie(!openKategorie)}>
+                카테고리 <IoIosArrowDown />
               </ModalMenuList>
-              <ModalMenuList marginTop>공지사항</ModalMenuList>
+              {openKategorie ? <Kategorie /> : null}
+              <ModalMenuList marginTop borderTop>
+                공지사항
+              </ModalMenuList>
               <ModalMenuList paddingBottom>고객센터</ModalMenuList>
               <ModalMenuList marginTop paddingBottom>
                 기프트카드 조회·환불

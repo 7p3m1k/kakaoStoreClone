@@ -4,7 +4,7 @@ import styled from "styled-components";
 const CharacterWrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 `;
 
 const Image = styled.img`
