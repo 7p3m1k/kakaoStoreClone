@@ -62,45 +62,77 @@ export const feedContents = [
 
 export const newContents = [
   {
-    id: 1,
     url: "https://t1.kakaocdn.net/friends/prod/main_tab/banner/banner_20210531110734_mobile_kr.jpg?type=thumb&opt=R375x211@2xa",
     title: "책상위를 시원하게",
     subTitle: "온라인 전용 탁상용 선풍기",
   },
   {
-    id: 2,
     url: "https://t1.kakaocdn.net/friends/prod/main_tab/banner/banner_20210615144604_mobile_kr.jpg?type=thumb&opt=R375x211@2xa",
+    title: "시원한 여름밤",
+    subTitle: "COOL 파자마 모음",
   },
   {
-    id: 3,
     url: "https://t1.kakaocdn.net/friends/prod/main_tab/banner/banner_20210615143750_mobile_kr.jpg?type=thumb&opt=R375x211@2xa",
+    title: "라이언과 클린하게",
+    subTitle: "살균 무선 충전기",
   },
   {
-    id: 4,
     url: "https://t1.kakaocdn.net/friends/prod/main_tab/banner/banner_20210610121236_mobile_kr.jpg?type=thumb&opt=R375x211@2xa",
+    title: "스트레스 날리는",
+    subTitle: "춘식이 스퀴즈 볼",
   },
   {
-    id: 5,
     url: "https://t1.kakaocdn.net/friends/prod/main_tab/banner/banner_20210609153826_mobile_kr.jpg?type=thumb&opt=R375x211@2xa",
+    title: "프렌즈와 떠나는 초록방학",
+    subTitle: "프렌즈 썸머 테마",
   },
   {
-    id: 6,
     url: "https://t1.kakaocdn.net/friends/prod/main_tab/banner/banner_20210531115449_mobile_kr.jpg?type=thumb&opt=R375x211@2xa",
+    title: "여름밤을 밝게",
+    subTitle: "LED 랜턴등",
   },
   {
-    id: 7,
     url: "https://t1.kakaocdn.net/friends/prod/main_tab/banner/banner_20210604113152_mobile_kr.jpg?type=thumb&opt=R375x211@2xa",
+    title: "프렌즈와 즐거운 여름준비",
+    subTitle: "선풍기&부채모음",
   },
   {
-    id: 8,
     url: "https://t1.kakaocdn.net/friends/prod/main_tab/banner/banner_20210524120219_mobile_kr.jpg?type=thumb&opt=R375x211@2xa",
+    title: "어두운 밤도 은은하게",
+    subTitle: "죠르디 나이트 라이트 충전기",
   },
   {
-    id: 9,
     url: "https://t1.kakaocdn.net/friends/prod/main_tab/banner/banner_20210222160504_mobile_kr.jpg?type=thumb&opt=R375x211@2xa",
+    title: "시선집중 차꾸템",
+    subTitle: "프렌즈와 FUN 드라이빙",
   },
   {
-    id: 10,
     url: "https://t1.kakaocdn.net/friends/prod/main_tab/banner/banner_20210208100213_mobile_kr.jpg?type=thumb&opt=R375x211@2xa",
+    title: "달을 품은 라이언",
+    subTitle: "온라인전용 굿나잇반달필로우",
+  },
+];
+
+export const newItemList = [
+  { title: "추천 신규 테마", subTitle: "초록방학" },
+  {
+    tiemTitle: "초록방학 개구리 라이언 인형",
+    price: "32000",
+    url: "https://t1.daumcdn.net/friends/prod/product/20210601174532087_8809721509166_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    tiemTitle: "초록방학 개구리 어피치 인형",
+    price: "32000",
+    url: "https://t1.daumcdn.net/friends/prod/product/20210601174615656_8809721509173_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    tiemTitle: "초록방학 낮잠필로우_수박라이언",
+    price: "17000",
+    url: "https://t1.daumcdn.net/friends/prod/product/20210601174708372_8809721509180_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    tiemTitle: "",
+    price: "",
+    url: "",
   },
 ];

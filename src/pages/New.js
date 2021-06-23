@@ -1,15 +1,11 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import { newContents } from "../utils/data";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-const SliderWrapper = styled.div`
-  margin-bottom: 20px;
-`;
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
@@ -51,7 +47,7 @@ function PrevArrow(props) {
 const settings = {
   dots: false,
   infinite: true,
-  // autoplay: true,
+  autoplay: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -60,9 +56,25 @@ const settings = {
   prevArrow: <PrevArrow />,
 };
 
+const SliderWrapper = styled.div`
+  margin-bottom: 20px;
+`;
+
 const SliderBarTextArea = styled.div`
-  margin-top: -50px;
+  margin-top: -70px;
   padding-left: 20px;
+  color: white;
+`;
+
+const SubTitleWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+  font-size: 16px;
+`;
+
+const Title = styled.b`
+  font-size: 24px;
 `;
 
 function New() {
@@ -76,10 +88,14 @@ function New() {
             <SliderWrapper>
               <img width="100%" src={newItem.url} alt="슬라이더 이미지" />
               <SliderBarTextArea>
-                <p>{newItem.title}</p>
-                <p>{newItem.subTitle}</p>
+                <Title>{newItem.title}</Title>
+                <SubTitleWrapper>
+                  <p>{newItem.subTitle}</p>
+                  <span>
+                    {index + 1}/ {newContents.length}
+                  </span>
+                </SubTitleWrapper>
               </SliderBarTextArea>
-              {}
             </SliderWrapper>
           );
         })}
