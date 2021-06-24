@@ -60,7 +60,7 @@ export const feedContents = [
   },
 ];
 
-export const newContents = [
+export const newSlideItem = [
   {
     url: "https://t1.kakaocdn.net/friends/prod/main_tab/banner/banner_20210531110734_mobile_kr.jpg?type=thumb&opt=R375x211@2xa",
     title: "책상위를 시원하게",
@@ -113,26 +113,148 @@ export const newContents = [
   },
 ];
 
-export const newItemList = [
-  { title: "추천 신규 테마", subTitle: "초록방학" },
+export const newThemeList = [
   {
-    tiemTitle: "초록방학 개구리 라이언 인형",
-    price: "32000",
+    itemTitle: "초록방학 개구리 라이언 인형",
+    price: 32000,
     url: "https://t1.daumcdn.net/friends/prod/product/20210601174532087_8809721509166_AW_00.jpg?type=thumb&opt=R255x255@2xa",
   },
   {
-    tiemTitle: "초록방학 개구리 어피치 인형",
-    price: "32000",
+    itemTitle: "초록방학 개구리 어피치 인형",
+    price: 32000,
     url: "https://t1.daumcdn.net/friends/prod/product/20210601174615656_8809721509173_AW_00.jpg?type=thumb&opt=R255x255@2xa",
   },
   {
-    tiemTitle: "초록방학 낮잠필로우_수박라이언",
-    price: "17000",
+    itemTitle: "초록방학 낮잠필로우_수박라이언",
+    price: 17000,
     url: "https://t1.daumcdn.net/friends/prod/product/20210601174708372_8809721509180_AW_00.jpg?type=thumb&opt=R255x255@2xa",
   },
   {
-    tiemTitle: "",
-    price: "",
-    url: "",
+    itemTitle: "초록방학 낮잠필로우_수박어피치",
+    price: 17000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210601174755126_8809721509197_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "초록방학 낮잠필로우_수박튜브",
+    price: 17000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210601174840973_8809721509203_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "초록방학 썸머파자마_남",
+    price: 49900,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210604175432746_8809721509562_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "초록방학 썸머파자마_여",
+    price: 49900,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210604175532878_8809721509579_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "초록방학 클리어우산_라이언",
+    price: 10000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210601183830960_8809721509388_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+];
+
+export const newProductsItem = [
+  {
+    itemTitle: "소주잔 세트_라이언&어피치",
+    price: 29000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210609120653269_8809721509883_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "수납짱 가방 ver.2_라이언",
+    price: 59000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210609120507243_8809721509739_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "수납짱 가방 mini_라이언",
+    price: 45000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210609115807919_8809721509821_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "춘식이 폭신폭신 페이스 쿠션",
+    price: 36000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210617184151134_8809721509685_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "걸이형 제습제_라이언",
+    price: 21000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210611111013851_8809721508923_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "쿨링 상하의 남성용_라이언&춘식",
+    price: 49900,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210608115528975_8809721509609_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "쿨링 상하의 여성용_라이언&춘식",
+    price: 49900,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210608115214738_8809721509616_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "쿨링 슬리브리스 원피스_라이언&춘식",
+    price: 39900,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210608114716257_8809721509623_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "라이언&춘식이 살균무선 충전기",
+    price: 39000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210608150434698_8809721509135_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "춘식이 식빵 스퀴즈볼",
+    price: 10000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210610110426149_8809721509142_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "손목보호쿠션_라이언",
+    price: 8000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210611110649313_8809721509043_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "손목보호쿠션_춘식이",
+    price: 8000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210611110153780_8809721509050_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "춘식이 썸머 페이스 부채",
+    price: 1500,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210601184313663_8809721509159_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "쿨링바디필로우_파인애플 죠르디",
+    price: 39000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210601111836524_8809721509548_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "죠르디 썸머 아이스 텀블러",
+    price: 16000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210601111211135_8809721509234_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "니니즈 쿨링파자마_남",
+    price: 49900,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210601111049228_8809721509586_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "니니즈 쿨링파자마_여",
+    price: 39900,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210601110826579_8809721509593_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "LED 무드등_라이언&춘식이",
+    price: 48000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210607172512027_8809721509265_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "썸머 홑이불 베개커버 세트_라이언&춘식이",
+    price: 29000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210527144959826_8809721508916_AW_00.jpg?type=thumb&opt=R255x255@2xa",
+  },
+  {
+    itemTitle: "라이언 스마트워치 스트랩(20mm)",
+    price: 13000,
+    url: "https://t1.daumcdn.net/friends/prod/product/20210527144902044_8809721509210_AW_00.jpg?type=thumb&opt=R255x255@2xa",
   },
 ];

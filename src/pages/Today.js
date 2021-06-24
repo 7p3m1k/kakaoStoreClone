@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 import { feedContents } from "../utils/data";
 import styled from "styled-components";
 import { BsHeart, BsChat, BsReply, IoIosArrowForward } from "react-icons/all";
@@ -195,6 +196,7 @@ function Today() {
           </>
         );
       })}
+      <Footer />
     </>
   );
 }
