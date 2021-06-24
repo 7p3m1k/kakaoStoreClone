@@ -18,7 +18,6 @@ function NextArrow(props) {
       style={{
         ...style,
         display: "block",
-        position: "absolute",
         left: "95%",
       }}
       onClick={onClick}
@@ -34,7 +33,6 @@ function PrevArrow(props) {
       style={{
         ...style,
         display: "block",
-        position: "absolute",
         left: "2%",
         zIndex: "1",
       }}
