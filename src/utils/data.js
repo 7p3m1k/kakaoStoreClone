@@ -16,13 +16,23 @@ export const feedContents = [
     date: "2021/05/22/10:22:10",
     profileImg:
       "https://t1.kakaocdn.net/friends/new_store/prod/main_tab/feed/npc_20210429165359.png",
-    feedImg:
-      "https://t1.kakaocdn.net/friends/prod/main_tab/feed/media/media_0_20210525183619.jpg",
     likes: 1298,
     title: "라이언 춘식이와 본격 여름준비🏝",
     description: "시원한 바람이 솔솔 ~\n 수박을 먹은것처럼 시원해 🧊",
     badge: "Exclusive",
     contentLink: "온라인 전용 탁상선풍기 보러가기",
+    slideImg: [
+      "https://t1.kakaocdn.net/friends/prod/main_tab/feed/media/media_0_20210525183619.jpg",
+      "https://t1.kakaocdn.net/friends/prod/main_tab/feed/media/media_0_20210531110225.jpg",
+      "https://t1.kakaocdn.net/friends/prod/main_tab/feed/media/media_1_20210531110225.jpg",
+      "https://t1.kakaocdn.net/friends/prod/main_tab/feed/media/media_2_20210531110225.jpg",
+      "https://t1.kakaocdn.net/friends/prod/main_tab/feed/media/media_3_20210531110225.jpg",
+      "https://t1.kakaocdn.net/friends/prod/main_tab/feed/media/media_4_20210531110225.jpg",
+      "https://t1.kakaocdn.net/friends/prod/main_tab/feed/media/media_5_20210531110225.jpg",
+      "https://t1.kakaocdn.net/friends/prod/main_tab/feed/media/media_6_20210531110226.jpg",
+      "https://t1.kakaocdn.net/friends/prod/main_tab/feed/media/media_7_20210531110226.jpg",
+      "https://t1.kakaocdn.net/friends/prod/main_tab/feed/media/media_8_20210531110226.jpg",
+    ],
   },
   {
     userName: "죠르디",
