@@ -38,7 +38,6 @@ const Modal = styled.div`
   overflow: scroll;
 
   ::-webkit-scrollbar {
-    width: 0 !important;
     display: none;
   }
 `;
@@ -110,14 +109,15 @@ const LoginBtn = styled.div`
   margin-top: 30px;
 `;
 
-function SideModal({ showModal, closeModal, openModal }) {
+function SideModal({ showModal, closeModal }) {
   const [openCharacter, setCharacter] = useState(false);
   const [openKategorie, setKategorie] = useState(false);
   const [openNonMember, setNonMember] = useState(false);
 
   function AA() {
-    closeModal();
-    setNonMember(true);
+    setNonMember(!openNonMember);
+    // closeModal();
+    document.body.style.overflow = "hidden";
   }
   return (
     <>
@@ -128,7 +128,7 @@ function SideModal({ showModal, closeModal, openModal }) {
               <LoginLink>
                 <u>로그인</u>이 필요해요 !
               </LoginLink>
-              <ViewGuestOrder onClick={() => AA()}>
+              <ViewGuestOrder onClick={AA}>
                 비회원 주문조회 <IoIosArrowForward />
               </ViewGuestOrder>
             </UserInfo>
@@ -164,9 +164,8 @@ function SideModal({ showModal, closeModal, openModal }) {
             </LoginBtn>
           </Modal>
         </ModalWrapper>
-      ) : openNonMember ? (
-        <NonMembersLayOut />
       ) : null}
+      {openNonMember ? <NonMembersLayOut /> : null}
     </>
   );
 }

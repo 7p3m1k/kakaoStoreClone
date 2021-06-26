@@ -42,18 +42,27 @@ const OrderListWrap = styled.div`
     height: 70px;
     font-size: 24px;
   }
+`;
 
-  button {
-    width: 220px;
-    height: 60px;
-    border: 1px solid #999;
-    margin: 20px 20px 0 20px;
-    font-size: 25px;
-  }
+const Button = styled.button`
+  width: 220px;
+  height: 60px;
+  border: 1px solid #999;
+  margin: 20px 20px 0 20px;
+  font-size: 25px;
+  background-color: ${props => (props.color ? "#f4c900;" : null)};
+  color: ${props => (props.color ? "white" : null)};
 `;
 
 function NonMembersLayOut() {
+  // document.body.style.overflow = "hidden";
   const [openO, setO] = useState(true);
+
+  const closeBtn = () => {
+    setO(false);
+    document.body.style.overflow = "unset";
+  };
+
   return (
     <>
       {openO ? (
@@ -67,8 +76,8 @@ function NonMembersLayOut() {
               <input />
               <span>이메일 : </span>
               <input />
-              <button onClick={() => setO(false)}>취소</button>
-              <button color>주문확인</button>
+              <Button onClick={closeBtn}>취소</Button>
+              <Button color>주문확인</Button>
             </OrderListWrap>
           </LayOut>
         </NonMembersLayOutWrapper>

@@ -22,14 +22,17 @@ function Header() {
 
   const openModal = () => {
     setShowModal(true);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setShowModal(false);
+    document.body.style.overflow = "unset";
   };
 
   return (
     <HeaderWrapper>
+      <SideModal showModal={showModal} closeModal={closeModal} />
       <VscMenu size="24" onClick={openModal} />
       <Link to="/">
         <Logo />
@@ -38,11 +41,6 @@ function Header() {
         <FiSearch size="24" />
         <VscGlobe size="24" />
       </div>
-      <SideModal
-        showModal={showModal}
-        closeModal={closeModal}
-        openModal={openModal}
-      />
     </HeaderWrapper>
   );
 }

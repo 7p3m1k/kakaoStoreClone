@@ -187,6 +187,15 @@ const ContentLink = styled.div`
   margin: 10px 0;
 `;
 
+const TestBadge = styled.p`
+  color: ${props =>
+    props.color.badge === "Daily Story"
+      ? "blue"
+      : "Exclusive"
+      ? "red"
+      : "pink"};
+`;
+
 function Today() {
   const [comments, setComments] = useState(["봄"]);
 
@@ -209,7 +218,6 @@ function Today() {
       {feedContents.map((feedItem, index) => {
         return (
           <>
-            {console.log(feedItem.slideImg)}
             <ProfileWrapper>
               <ProfileImg src={feedItem.profileImg} />
               <div>
@@ -217,7 +225,7 @@ function Today() {
                   <strong>{feedItem.userName}</strong>
                 </ProfileName>
                 <BadgeTime>
-                  <p>{feedItem.badge}</p>
+                  <TestBadge color={feedItem}>{feedItem.badge}</TestBadge>
                   {timeForToday(feedItem.date)}
                 </BadgeTime>
               </div>
@@ -226,7 +234,7 @@ function Today() {
               <Slider {...settings} dotsClass="todaySlider-dot">
                 {feedItem.slideImg &&
                   feedItem.slideImg.map(el => {
-                    return <img width="100%" src={el} />;
+                    return <img width="100%" src={el} alt="el" />;
                   })}
               </Slider>
             ) : (
