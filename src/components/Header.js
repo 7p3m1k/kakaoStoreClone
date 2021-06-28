@@ -4,7 +4,6 @@ import { VscMenu, VscGlobe, FiSearch } from "react-icons/all";
 import { Link } from "react-router-dom";
 import SideModal from "./SideModal";
 import NonMembersLayOut from "./NonMembersLayOut";
-
 const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;

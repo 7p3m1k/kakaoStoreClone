@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled, { keyframes, css } from "styled-components";
 import CharacterList from "./CharacterList";
 import Kategorie from "./Kategorie";
+import SocialLogin from "./SocialLogin";
 import {
   IoIosArrowDown,
   IoIosArrowUp,
@@ -45,13 +46,6 @@ const UserInfo = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-`;
-
-const LoginLink = styled.div`
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  cursor: pointer;
 `;
 
 const ViewGuestOrder = styled.div`
@@ -118,9 +112,7 @@ function SideModal({ showModal, closeModal, nonMemberOrder }) {
         <ModalWrapper onClick={closeModal}>
           <Modal onClick={e => e.stopPropagation()}>
             <UserInfo>
-              <LoginLink>
-                <u>로그인</u>이 필요해요 !
-              </LoginLink>
+              <SocialLogin />
               <ViewGuestOrder onClick={nonMemberOrder}>
                 비회원 주문조회 <IoIosArrowForward />
               </ViewGuestOrder>

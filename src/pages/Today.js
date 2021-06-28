@@ -137,13 +137,14 @@ const ContentLink = styled.div`
   margin: 10px 0;
 `;
 
-const TestBadge = styled.p`
+const BadgeColor = styled.p`
   color: ${props =>
     props.color.badge === "Daily Story"
-      ? "blue"
+      ? "#2f7ee6"
       : "Exclusive"
-      ? "red"
-      : "pink"};
+      ? "#ad32c5"
+      : ""};
+  font-size: 14px;
 `;
 
 function Today() {
@@ -174,7 +175,9 @@ function Today() {
                   <strong>{feedItem.userName}</strong>
                 </ProfileName>
                 <BadgeTime>
-                  <TestBadge color={feedItem}>{feedItem.badge}</TestBadge>
+                  <BadgeColor color={feedItem}>
+                    <b>{feedItem.badge}</b>
+                  </BadgeColor>
                   {timeForToday(feedItem.date)}
                 </BadgeTime>
               </div>
