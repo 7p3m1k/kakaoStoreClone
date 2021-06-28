@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const NonMembersLayOutWrapper = styled.div`
@@ -7,7 +7,7 @@ const NonMembersLayOutWrapper = styled.div`
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: 100;
   background-color: rgba(0, 0, 0, 0.8);
 `;
 
@@ -54,18 +54,10 @@ const Button = styled.button`
   color: ${props => (props.color ? "white" : null)};
 `;
 
-function NonMembersLayOut() {
-  // document.body.style.overflow = "hidden";
-  const [openO, setO] = useState(true);
-
-  const closeBtn = () => {
-    setO(false);
-    document.body.style.overflow = "unset";
-  };
-
+function NonMembersLayOut({ openNonMemberOrder, closeBtn }) {
   return (
     <>
-      {openO ? (
+      {openNonMemberOrder ? (
         <NonMembersLayOutWrapper>
           <LayOut>
             <HeadName>비회원 주문조회</HeadName>

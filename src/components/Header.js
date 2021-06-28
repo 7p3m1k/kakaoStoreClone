@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { VscMenu, VscGlobe, FiSearch } from "react-icons/all";
 import { Link } from "react-router-dom";
 import SideModal from "./SideModal";
+import NonMembersLayOut from "./NonMembersLayOut";
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -19,6 +20,7 @@ const Logo = styled.div`
 
 function Header() {
   const [showModal, setShowModal] = useState(false);
+  const [openNonMemberOrder, setNonMemberOrder] = useState(false);
 
   const openModal = () => {
     setShowModal(true);
@@ -30,9 +32,32 @@ function Header() {
     document.body.style.overflow = "unset";
   };
 
+  function nonMemberOrder() {
+    setNonMemberOrder(true);
+    setShowModal(false);
+    document.body.style.overflow = "hidden";
+  }
+
+  const closeBtn = () => {
+    setNonMemberOrder(false);
+    document.body.style.overflow = "unset";
+  };
+
   return (
     <HeaderWrapper>
-      <SideModal showModal={showModal} closeModal={closeModal} />
+      {showModal ? (
+        <SideModal
+          showModal={showModal}
+          closeModal={closeModal}
+          nonMemberOrder={nonMemberOrder}
+        />
+      ) : null}
+      {openNonMemberOrder ? (
+        <NonMembersLayOut
+          openNonMemberOrder={openNonMemberOrder}
+          closeBtn={closeBtn}
+        />
+      ) : null}
       <VscMenu size="24" onClick={openModal} />
       <Link to="/">
         <Logo />

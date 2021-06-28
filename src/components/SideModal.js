@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled, { keyframes, css } from "styled-components";
 import CharacterList from "./CharacterList";
 import Kategorie from "./Kategorie";
-import NonMembersLayOut from "./NonMembersLayOut";
 import {
   IoIosArrowDown,
   IoIosArrowUp,
@@ -109,16 +108,10 @@ const LoginBtn = styled.div`
   margin-top: 30px;
 `;
 
-function SideModal({ showModal, closeModal }) {
+function SideModal({ showModal, closeModal, nonMemberOrder }) {
   const [openCharacter, setCharacter] = useState(false);
   const [openKategorie, setKategorie] = useState(false);
-  const [openNonMember, setNonMember] = useState(false);
 
-  function AA() {
-    setNonMember(!openNonMember);
-    // closeModal();
-    document.body.style.overflow = "hidden";
-  }
   return (
     <>
       {showModal ? (
@@ -128,7 +121,7 @@ function SideModal({ showModal, closeModal }) {
               <LoginLink>
                 <u>로그인</u>이 필요해요 !
               </LoginLink>
-              <ViewGuestOrder onClick={AA}>
+              <ViewGuestOrder onClick={nonMemberOrder}>
                 비회원 주문조회 <IoIosArrowForward />
               </ViewGuestOrder>
             </UserInfo>
@@ -165,7 +158,6 @@ function SideModal({ showModal, closeModal }) {
           </Modal>
         </ModalWrapper>
       ) : null}
-      {openNonMember ? <NonMembersLayOut /> : null}
     </>
   );
 }

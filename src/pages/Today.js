@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import { feedContents } from "../utils/data";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import { BsHeart, BsChat, BsReply, IoIosArrowForward } from "react-icons/all";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -42,57 +42,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: true,
-  // dotsClass: "todaySlider-dot",
 };
-
-// const Global = createGlobalStyle`
-
-// .todaySlider-dot {
-//   text-align: center;
-
-// }
-
-// .todaySlider-dot li{
-//   position: relative;
-//   display: inline-block;
-//   width: 15px;
-//   height: 15px;
-//   padding: 0;
-// }
-
-//   .todaySlider-dot li button {
-//   font-size: 0;
-//   line-height: 0;
-//   display: block;
-//   width: 15px;
-//   height: 15px;
-//   padding: 5px;
-//   cursor: pointer;
-//   color: transparent;
-//   border: 0;
-//   outline: 0;
-//   background: 0 0;
-// }
-
-// .todaySlider-dot li button:before {
-//   font-size: 2.7rem;
-//   line-height: 20px;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 20px;
-//   height: 20px;
-//   content: '•';
-//   text-align: center;
-//   opacity: .75;
-//   color: #e0e0e0;
-// }
-
-// .todaySlider-dot li.slick-active button:before {
-//   opacity: .75;
-//   color: black;
-// }
-// `;
 
 const ProfileImg = styled.img`
   width: 40px;
@@ -212,7 +162,6 @@ function Today() {
 
   return (
     <>
-      {/* <Global /> */}
       <Header />
       <Nav />
       {feedContents.map((feedItem, index) => {
