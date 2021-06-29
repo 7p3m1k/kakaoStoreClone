@@ -4,6 +4,7 @@ import Today from "./pages/Today";
 import New from "./pages/New";
 import Hot from "./pages/Hot";
 import Products from "./pages/Products";
+import Detail from "./pages/Detail/Detail";
 
 const Routes = () => {
   return (
@@ -13,6 +14,7 @@ const Routes = () => {
         <Route path="/new" component={New} />
         <Route path="/hot" component={Hot} />
         <Route path="/products" component={Products} />
+        <Route exact path="/detail" component={Detail} />
       </Switch>
     </Router>
   );

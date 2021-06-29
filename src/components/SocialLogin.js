@@ -1,6 +1,7 @@
 // import { useHistory } from "react-router-dom";
 import React from "react";
 import styled from "styled-components";
+import axios from "axios";
 
 const LoginLink = styled.button`
   font-size: 18px;
@@ -14,7 +15,7 @@ function SocialLogin() {
     window.Kakao.Auth.login({
       success: function (authObj) {
         console.log(authObj);
-        fetch(`http://localhost:3000/oauth/kakao`, {
+        axios("http://localhost:3000/oauth/kakao", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
