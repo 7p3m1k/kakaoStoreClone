@@ -2,6 +2,7 @@ import React from "react";
 import { newProductsItem } from "../utils/data";
 import { IoBagOutline } from "react-icons/all";
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 const NewProductsWrpper = styled.ul`
   display: flex;
@@ -57,16 +58,18 @@ function NewProductsItem() {
       <NewProductsWrpper>
         {newProductsItem.map((productItem, index) => {
           return (
-            <ProductsItem>
-              <img width="100%" src={productItem.url} alt="" />
-              <ItemTitlewrpper>
-                <ItemTitle>{productItem.itemTitle}</ItemTitle>
-                <IoBagOutline size="24" color="#777777" />
-              </ItemTitlewrpper>
-              <ItemTitle price>
-                {productItem.price.toLocaleString()}원
-              </ItemTitle>
-            </ProductsItem>
+            <Link to={`/detail/${index}`}>
+              <ProductsItem>
+                <img width="100%" src={productItem.url} alt="" />
+                <ItemTitlewrpper>
+                  <ItemTitle>{productItem.itemTitle}</ItemTitle>
+                  <IoBagOutline size="24" color="#777777" />
+                </ItemTitlewrpper>
+                <ItemTitle price>
+                  {productItem.price.toLocaleString()}원
+                </ItemTitle>
+              </ProductsItem>
+            </Link>
           );
         })}
       </NewProductsWrpper>

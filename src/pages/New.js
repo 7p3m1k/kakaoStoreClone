@@ -2,8 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import NewProductsItem from "../components/NewProducts";
-import { Link } from "react-router-dom";
+import NewProductsItem from "../components/NewProductsItem";
 import Footer from "../components/Footer";
 import { newSlideItem, newThemeList } from "../utils/data";
 import Slider from "react-slick";
@@ -165,18 +164,16 @@ function New() {
         <NewThemeList>
           {newThemeList.map((newThemeItem, index) => {
             return (
-              <Link to={`/detail/${index}`}>
-                <NewTheme key={index}>
-                  <img width="100%" src={newThemeItem.url} alt="" />
-                  <ItemTitlewrapper>
-                    <ItemTitle>{newThemeItem.itemTitle}</ItemTitle>
-                    <IoBagOutline size="24" color="#777777" />
-                  </ItemTitlewrapper>
-                  <ItemTitle price>
-                    {newThemeItem.price.toLocaleString()}원
-                  </ItemTitle>
-                </NewTheme>
-              </Link>
+              <NewTheme key={index}>
+                <img width="100%" src={newThemeItem.url} alt="" />
+                <ItemTitlewrapper>
+                  <ItemTitle>{newThemeItem.itemTitle}</ItemTitle>
+                  <IoBagOutline size="24" color="#777777" />
+                </ItemTitlewrapper>
+                <ItemTitle price>
+                  {newThemeItem.price.toLocaleString()}원
+                </ItemTitle>
+              </NewTheme>
             );
           })}
         </NewThemeList>
