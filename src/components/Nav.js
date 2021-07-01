@@ -35,7 +35,7 @@ function Nav() {
     },
     {
       name: "마이",
-      path: "/products",
+      path: "/my",
     },
   ];
 
