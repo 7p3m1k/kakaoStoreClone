@@ -150,13 +150,13 @@ const BadgeColor = styled.p`
 function Today() {
   const [comments, setComments] = useState(["봄"]);
 
-  const addComments = event => {
-    if (event.key === "Enter") {
-      if (event.target.value === "") {
+  const addComments = e => {
+    if (e.key === "Enter") {
+      if (e.target.value === "") {
         setComments(comments);
       } else {
-        setComments([...comments, event.target.value]);
-        event.target.value = "";
+        setComments([...comments, e.target.value]);
+        e.target.value = "";
       }
     }
   };
@@ -220,13 +220,13 @@ function Today() {
                   <Comment>{comment}</Comment>
                 </CommentWrapper>
               ))}
+              <Input
+                placeholder="댓글을 달아주세요."
+                onKeyUp={e => {
+                  addComments(e);
+                }}
+              />
             </ul>
-            <Input
-              placeholder="댓글을 달아주세요."
-              onKeyUp={e => {
-                addComments(e);
-              }}
-            />
           </>
         );
       })}
