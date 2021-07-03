@@ -141,7 +141,7 @@ function New() {
       <Slider {...settings}>
         {newSlideItem.map((newItemSlide, index) => {
           return (
-            <SliderWrapper>
+            <SliderWrapper key={index}>
               <img width="100%" src={newItemSlide.url} alt="슬라이더 이미지" />
               <SliderBarTextArea>
                 <Title>{newItemSlide.title}</Title>

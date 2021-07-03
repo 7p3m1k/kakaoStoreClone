@@ -43,8 +43,8 @@ function Nav() {
     <>
       <NavLists>
         {menus.map((menu, index) => (
-          <NavList>
-            <Link to={menu.path} key={index}>
+          <NavList key={index}>
+            <Link to={menu.path}>
               <NavbarItem
                 menu={menu}
                 isActive={pathName === menu.path ? true : false}

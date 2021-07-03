@@ -8,6 +8,7 @@ import { BsHeart, BsChat, BsReply, IoIosArrowForward } from "react-icons/all";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Comments from "../components/Comments";
 
 function timeForToday(value) {
   const today = new Date();
@@ -98,35 +99,6 @@ const Feed = styled.div`
   white-space: pre-line;
 `;
 
-const Input = styled.input`
-  width: 100%;
-  height: 50px;
-  background: #f1f0f4;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
-  padding: 10px 0 10px 20px;
-  margin: 20px 0;
-  font-size: 16px;
-  ::placeholder {
-    color: gray;
-  }
-`;
-
-const CommentLength = styled.div`
-  color: #9a9a9e;
-  font-size: 16px;
-  margin: 10px 0;
-`;
-
-const CommentWrapper = styled.li`
-  font-size: 16px;
-`;
-
-const Comment = styled.span`
-  margin-left: 10px;
-`;
-
 const ContentLink = styled.div`
   border: 1px solid black;
   border-radius: 10px;
@@ -148,26 +120,13 @@ const BadgeColor = styled.p`
 `;
 
 function Today() {
-  const [comments, setComments] = useState(["봄"]);
-
-  const addComments = e => {
-    if (e.key === "Enter") {
-      if (e.target.value === "") {
-        setComments(comments);
-      } else {
-        setComments([...comments, e.target.value]);
-        e.target.value = "";
-      }
-    }
-  };
-
   return (
     <>
       <Header />
       <Nav />
       {feedContents.map((feedItem, index) => {
         return (
-          <>
+          <React.Fragment key={index}>
             <ProfileWrapper>
               <ProfileImg src={feedItem.profileImg} />
               <div>
@@ -185,8 +144,8 @@ function Today() {
             {feedItem.slideImg ? (
               <Slider {...settings} dotsClass="todaySlider-dot">
                 {feedItem.slideImg &&
-                  feedItem.slideImg.map(el => {
-                    return <img width="100%" src={el} alt="el" />;
+                  feedItem.slideImg.map((el, index) => {
+                    return <img width="100%" src={el} alt="el" key={index} />;
                   })}
               </Slider>
             ) : (
@@ -212,22 +171,8 @@ function Today() {
             </Likes>
             <Title>{feedItem.title}</Title>
             <Feed>{feedItem.description}</Feed>
-            <CommentLength>댓글 {comments.length}개</CommentLength>
-            <ul>
-              {comments.map((comment, index) => (
-                <CommentWrapper key={index}>
-                  <strong>박**</strong>
-                  <Comment>{comment}</Comment>
-                </CommentWrapper>
-              ))}
-              <Input
-                placeholder="댓글을 달아주세요."
-                onKeyUp={e => {
-                  addComments(e);
-                }}
-              />
-            </ul>
-          </>
+            <Comments />
+          </React.Fragment>
         );
       })}
       <Footer />

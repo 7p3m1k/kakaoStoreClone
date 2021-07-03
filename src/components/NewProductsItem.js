@@ -58,7 +58,7 @@ function NewProductsItem() {
       <NewProductsWrpper>
         {newProductsItem.map((productItem, index) => {
           return (
-            <Link to={`/detail/${index}`}>
+            <Link key={index} to={`/detail/${index}`}>
               <ProductsItem>
                 <img width="100%" src={productItem.url} alt="" />
                 <ItemTitlewrpper>

@@ -36,7 +36,7 @@ function Detail() {
       <DetailHeader />
       <img width="100%" src={match.url} alt="" />
       <DetailTitle>
-        <bold>{match.itemTitle}</bold>
+        <b>{match.itemTitle}</b>
         <div>
           <HiShare size="26px" />
         </div>
