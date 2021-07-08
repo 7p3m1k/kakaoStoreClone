@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Today from "./pages/Today";
 import New from "./pages/New";
-import Hot from "./pages/Hot";
+import Hot from "./pages/Hot/Hot";
 import My from "./pages/My";
 import Detail from "./pages/Detail/Detail";
 
