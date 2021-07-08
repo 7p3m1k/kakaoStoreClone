@@ -8,12 +8,12 @@ React Hooks를 복습하고, 다양한 기술스택 활용도와 기타 개발 �
 
 ### 🛠  기술 스택
 
-React
-React-Router
-Hooks
-Axios
-Styled-Components
-etc(GitHub, Slack, Jira Confluence)
+- React
+- React-Router
+- Hooks
+- Axios
+- Styled-Components
+- etc(GitHub, Slack, Jira Confluence)
 
 ### 아자아자 !
 
