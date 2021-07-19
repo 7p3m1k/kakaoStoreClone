@@ -26,6 +26,7 @@ const DetailPrice = styled.p`
 function Detail() {
   let [items, setItems] = useState(newProductsItem);
   let { id } = useParams();
+  console.log(items)
 
   let match = items.find(function (newProductsItem) {
     if (newProductsItem.id == id) return true;
